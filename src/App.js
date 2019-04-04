@@ -1,26 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { createBrowserHistory } from 'history'
+import { Provider } from 'mobx-react'
+import { Router, Route, Switch } from 'react-router-dom'
 
-class App extends Component {
+import { stores } from 'stores'
+import { Home } from 'pages'
+
+const history = createBrowserHistory()
+
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider {...stores}>
+        <Router history={history}>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+          </Switch>
+        </Router>
+      </Provider>
     );
   }
 }

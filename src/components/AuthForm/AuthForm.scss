@@ -1,0 +1,111 @@
+.authForm_container {
+    font-family: "SF Display";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    .authForm_header {
+        .logo img {
+            width: 180px;
+            height: 180px;
+        }
+    }
+
+    .authForm_wrapper {
+        width: 340px;
+        padding: 0 16px;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            border-radius: 5px;
+            border: 1px solid #d8dee2;
+            background: #fff;
+            font-size: 14px;
+            padding: 20px;
+            text-align: left;
+
+            label {
+                margin-bottom: 7px;
+                font-weight: 600;
+            }
+
+            input {
+                display: block;
+                margin-bottom: 15px;
+                margin-top: 5px;
+                background-color: #F7F7F7;
+                border-radius: 3px;
+                line-height: 20px;
+                outline: none;
+                padding: 6px 8px;
+                vertical-align: middle;
+                box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+                border: 1px solid #d1d5da;
+                font-size: 14px;
+
+                &:focus {
+                    border-color: #2188ff;
+                    box-shadow: inset 0 1px 2px rgba(27,31,35,.075), 0 0 0 0.2em rgba(3,102,214,.3);
+                    outline: none;
+                }
+            }
+            #submit_btn {
+                background: #1931B5;
+                color: #fff;
+                padding: 6px 12px;
+                font-size: 14px;
+                border: 1px solid rgba(27,31,35,.2);
+                cursor: pointer;
+                border-radius: 5px;
+            }
+        }
+        .signup-callout {
+            border: 1px solid #d8dee2;
+            border-radius: 5px;
+            padding: 15px 20px;
+            text-align: center;
+            margin-top: 16px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            
+            a {
+                text-decoration: none;
+                color: #0366d6;
+            }
+        }
+    }
+
+    .footer {
+        font-size: 12px;
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 40px 6px 0 6px;
+            padding: 40px 16px;
+            li {
+
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+                &:last-child {
+                    a {
+                        color: #586069;
+                    }
+                }
+                a {
+                    color: #0366d6;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
